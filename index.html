@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hicham Elhaiba - Civil Engineer</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
 
+  <!-- Dark Mode Toggle -->
+  <label class="theme-toggle">
+    <input type="checkbox" id="themeToggle">
+    <span>🌙</span>
+  </label>
+
   <!-- Hero Section -->
-  <section class="hero" id="home">
+  <section class="hero" id="home" data-aos="fade-down">
     <div class="container">
       <img src="assets/images/1.jpg" alt="Profile Photo" class="profile-pic" />
       <h1>Hicham Elhaiba</h1>
@@ -25,7 +32,7 @@
   </section>
 
   <!-- About Section -->
-  <section class="about" id="about">
+  <section class="about" id="about" data-aos="fade-up">
     <div class="container">
       <h2>About Me</h2>
       <p>I am a civil engineering technician with experience in reinforced concrete design, seismic analysis, and structural modeling using software such as RSA, CBS, and AutoCAD.</p>
@@ -38,7 +45,7 @@
   </section>
 
   <!-- Experience Section -->
-  <section class="experience" id="experience">
+  <section class="experience" id="experience" data-aos="fade-up">
     <div class="container">
       <h2>Experience</h2>
       <div class="card">
@@ -63,24 +70,34 @@
   </section>
 
   <!-- Skills Section -->
-  <section class="skills" id="skills">
+  <section class="skills" id="skills" data-aos="fade-up">
     <div class="container">
       <h2>Technical Skills</h2>
-      <ul>
-        <li>AutoCAD</li>
-        <li>Robot Structural Analysis (RSA)</li>
-        <li>Concrete Building Structures (CBS)</li>
-        <li>Revit</li>
-        <li>MS Office 365</li>
-        <li>Reinforced Concrete Design</li>
-        <li>Seismic Analysis & Finite Element Modeling</li>
-        <li>Road Pavement Design (GMTR norms)</li>
-      </ul>
+      <div class="skill-bar">
+        <p>AutoCAD</p>
+        <div class="progress"><div class="percent" style="width: 85%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>Robot Structural Analysis (RSA)</p>
+        <div class="progress"><div class="percent" style="width: 80%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>Concrete Building Structures (CBS)</p>
+        <div class="progress"><div class="percent" style="width: 75%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>Revit</p>
+        <div class="progress"><div class="percent" style="width: 65%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>MS Office 365</p>
+        <div class="progress"><div class="percent" style="width: 90%"></div></div>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="projects" id="projects">
+  <section class="projects" id="projects" data-aos="fade-up">
     <div class="container">
       <h2>Projects</h2>
       <div class="card">
@@ -103,7 +120,7 @@
   </section>
 
   <!-- Languages Section -->
-  <section class="languages" id="languages">
+  <section class="languages" id="languages" data-aos="fade-up">
     <div class="container">
       <h2>Languages</h2>
       <ul>
@@ -111,6 +128,19 @@
         <li>Anglais : Intermédiaire</li>
         <li>Français : Intermédiaire</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
     </div>
   </section>
 
