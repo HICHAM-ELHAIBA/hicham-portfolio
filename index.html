@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hicham Elhaiba - Civil Engineer</title>
+  <title>Hicham Elhaiba | Civil Engineer</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 
-  <!-- Dark Mode Toggle -->
-  <label class="theme-toggle">
-    <input type="checkbox" id="themeToggle">
-    <span>🌙</span>
+  <!-- Theme Toggle -->
+  <label class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
   </label>
 
   <!-- Hero Section -->
-  <section class="hero" id="home" data-aos="fade-down">
-    <div class="container">
+  <section class="hero" id="home">
+    <div class="overlay" data-aos="fade-in"></div>
+    <div class="hero-content" data-aos="fade-up">
       <img src="assets/images/1.jpg" alt="Profile Photo" class="profile-pic" />
       <h1>Hicham Elhaiba</h1>
       <p>Civil Engineering Technician</p>
       <a href="assets/CV.pdf" download class="btn">Download Resume</a>
       <div class="socials">
-        <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="mailto:hichame.elhaiba1@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
@@ -35,12 +36,14 @@
   <section class="about" id="about" data-aos="fade-up">
     <div class="container">
       <h2>About Me</h2>
-      <p>I am a civil engineering technician with experience in reinforced concrete design, seismic analysis, and structural modeling using software such as RSA, CBS, and AutoCAD.</p>
-      <ul>
-        <li><strong>Degree:</strong> Licence en Génie Civil</li>
-        <li><strong>Previous:</strong> DUT en Génie Civil</li>
-        <li><strong>Baccalaureate:</strong> Sciences Expérimentales</li>
-      </ul>
+      <p>I'm a civil engineering technician with hands-on experience in reinforced concrete design, seismic analysis, and structural modeling using tools like AutoCAD, RSA, and CBS.</p>
+      <div class="education">
+        <ul>
+          <li>🎓 Licence en Génie Civil</li>
+          <li>🎓 DUT en Génie Civil</li>
+          <li>📜 Baccalaureate - Sciences Expérimentales</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -48,23 +51,25 @@
   <section class="experience" id="experience" data-aos="fade-up">
     <div class="container">
       <h2>Experience</h2>
-      <div class="card">
-        <h3>Stagiaire - Agence Nationale des Equipements Publics (ANEP)</h3>
-        <p class="date">Avril 2024 – Juin 2024 | Marrakech</p>
-        <ul>
-          <li>Conception des plans de béton armé pour plusieurs blocs d’un lycée.</li>
-          <li>Étude parasismique avec modélisation aux éléments finis et analyse modale.</li>
-          <li>Ferraillage des éléments porteurs avec vérification des efforts horizontaux.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Stagiaire — BATI-ENGINEERING</h3>
-        <p class="date">Juillet 2023 – Août 2023 | Settat</p>
-        <ul>
-          <li>Conception des plans de béton armé pour un bâtiment R+2.</li>
-          <li>Étude parasismique avec modélisation aux éléments finis et analyse modale.</li>
-          <li>Dimensionnement manuel et optimisation des sections d’acier.</li>
-        </ul>
+      <div class="timeline">
+        <div class="card" data-aos="fade-right">
+          <h3>Agence Nationale des Equipements Publics (ANEP)</h3>
+          <p class="date">Avril 2024 – Juin 2024 | Marrakech</p>
+          <ul>
+            <li>Conception des plans de béton armé pour plusieurs blocs d’un lycée.</li>
+            <li>Étude parasismique avec modélisation aux éléments finis et analyse modale.</li>
+            <li>Ferraillage des éléments porteurs avec vérification des efforts horizontaux.</li>
+          </ul>
+        </div>
+        <div class="card" data-aos="fade-left">
+          <h3>BATI-ENGINEERING</h3>
+          <p class="date">Juillet 2023 – Août 2023 | Settat</p>
+          <ul>
+            <li>Conception des plans de béton armé pour un bâtiment R+2.</li>
+            <li>Étude parasismique avec modélisation aux éléments finis et analyse modale.</li>
+            <li>Dimensionnement manuel et optimisation des sections d’acier.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -100,34 +105,16 @@
   <section class="projects" id="projects" data-aos="fade-up">
     <div class="container">
       <h2>Projects</h2>
-      <div class="card">
-        <h3>Etude technique et économique d’un lycée</h3>
-        <ul>
-          <li>Réalisation des plans de coffrage.</li>
-          <li>Étude sismique de la structure avec modélisation et vérification parasismique.</li>
-          <li>Estimation du métré et des coûts.</li>
-        </ul>
+      <div class="project-grid">
+        <div class="project-card" onclick="openModal('project1')">
+          <h3>Etude Technique d’un Lycée</h3>
+          <p>Plans de coffrage, étude sismique, estimation des coûts.</p>
+        </div>
+        <div class="project-card" onclick="openModal('project2')">
+          <h3>Projet R+2</h3>
+          <p>Plans de béton armé, dimensionnement manuel, estimation des quantités.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Projet de bâtiment R+2</h3>
-        <ul>
-          <li>Conception des plans de béton armé (coffrage et ferraillage).</li>
-          <li>Pré-dimensionnement des éléments porteurs.</li>
-          <li>Estimation des quantités de matériaux.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Languages Section -->
-  <section class="languages" id="languages" data-aos="fade-up">
-    <div class="container">
-      <h2>Languages</h2>
-      <ul>
-        <li>Arabe : Langue maternelle</li>
-        <li>Anglais : Intermédiaire</li>
-        <li>Français : Intermédiaire</li>
-      </ul>
     </div>
   </section>
 
@@ -149,6 +136,32 @@
     <p>© 2025 Hicham Elhaiba. All rights reserved.</p>
   </footer>
 
+  <!-- Project Modal -->
+  <div class="modal" id="project1-modal">
+    <div class="modal-content">
+      <span onclick="closeModal('project1')">×</span>
+      <h2>Etude Technique d’un Lycée</h2>
+      <ul>
+        <li>Réalisation des plans de coffrage.</li>
+        <li>Étude sismique de la structure avec modélisation et vérification parasismique.</li>
+        <li>Estimation du métré et des coûts.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal" id="project2-modal">
+    <div class="modal-content">
+      <span onclick="closeModal('project2')">×</span>
+      <h2>Projet R+2</h2>
+      <ul>
+        <li>Conception des plans de béton armé (coffrage et ferraillage).</li>
+        <li>Pré-dimensionnement des éléments porteurs.</li>
+        <li>Estimation des quantités de matériaux.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
