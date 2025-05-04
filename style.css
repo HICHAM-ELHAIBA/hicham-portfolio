@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  line-height: 1.6;
+  background: #0e0e0e;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.dark-mode {
+  background: #0e0e0e;
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  color: #00ffff;
+  text-transform: uppercase;
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #00ffff;
+  color: #000;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  background: #00cccc;
+  transform: scale(1.05);
+}
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: #00ffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #001f3f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 80%);
+  z-index: 1;
+}
+.hero-content {
+  z-index: 2;
+  color: white;
+  position: relative;
+}
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00ffff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px #00ffff;
+}
+.subtitle {
+  font-size: 1.5rem;
+  color: #00ffff;
+  margin-bottom: 1.5rem;
+}
+.socials i {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.socials i:hover {
+  color: #ffd700;
+}
+
+/* Sections */
+section {
+  padding: 6rem 0;
+  background: #111;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: #222;
+  padding: 2rem;
+  border-left: 5px solid #00ffff;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+.date {
+  font-style: italic;
+  color: #888;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #00ffff;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+.timeline-item::before {
+  content: attr(data-year);
+  position: absolute;
+  left: -80px;
+  top: 0;
+  font-size: 0.9rem;
+  color: #00ffff;
+}
+
+/* Skill Grid */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.skill-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.skill-card:hover {
+  transform: scale(1.05);
+}
+.skill-name {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.bar {
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  background: linear-gradient(to right, #00ffff, #00cccc);
+  width: 0%;
+  transition: width 2s ease-in-out;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.project-card {
+  background: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+.modal-content {
+  background: #111;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 0 20px #00ffff;
+}
+.modal span {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #00ffff;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+}
