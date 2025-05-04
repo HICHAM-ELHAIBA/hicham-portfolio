@@ -1,12 +1,18 @@
 // AOS Animations
 AOS.init();
 
-// Dark Mode Toggle
-const themeToggle = document.getElementById('themeToggle');
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  const icons = themeToggle.querySelectorAll('i');
-  icons.forEach(icon => icon.style.display = icon.style.display === 'none' ? 'block' : 'none');
+// Custom Cursor
+const cursor = document.getElementById('customCursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.top = e.pageY + 'px';
+});
+
+// Skill Bar Animation
+document.querySelectorAll('.skill-card').forEach(card => {
+  const percent = card.getAttribute('data-percent');
+  const fill = card.querySelector('.fill');
+  fill.style.width = percent;
 });
 
 // EmailJS Contact Form
