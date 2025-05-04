@@ -5,54 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hicham Elhaiba | Civil Engineer</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
-<body>
+<body class="dark-mode">
 
-  <!-- Theme Toggle -->
-  <label class="theme-toggle" id="themeToggle">
-    <i class="fas fa-moon"></i>
-    <i class="fas fa-sun"></i>
-  </label>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="customCursor"></div>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <div class="overlay" data-aos="fade-in"></div>
-    <div class="hero-content" data-aos="fade-up">
-      <img src="assets/images/1.jpg" alt="Profile Photo" class="profile-pic" />
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="profile-container">
+        <img src="assets/images/1.jpg" alt="Profile Photo" class="profile-pic" />
+        <div class="glow"></div>
+      </div>
       <h1>Hicham Elhaiba</h1>
-      <p>Civil Engineering Technician</p>
-      <a href="assets/CV.pdf" download class="btn">Download Resume</a>
+      <p class="subtitle">Civil Engineering Technician</p>
       <div class="socials">
         <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="mailto:hichame.elhaiba1@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
+    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1pxqjq1q.json" background="transparent" speed="1" style="width: 150px; height: 150px; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);" loop autoplay></lottie-player>
   </section>
 
   <!-- About Section -->
-  <section class="about" id="about" data-aos="fade-up">
+  <section class="about" id="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>I'm a civil engineering technician with hands-on experience in reinforced concrete design, seismic analysis, and structural modeling using tools like AutoCAD, RSA, and CBS.</p>
-      <div class="education">
-        <ul>
-          <li>🎓 Licence en Génie Civil</li>
-          <li>🎓 DUT en Génie Civil</li>
-          <li>📜 Baccalaureate - Sciences Expérimentales</li>
-        </ul>
+      <p>I’m a civil engineering technician with hands-on experience in reinforced concrete design, seismic analysis, and structural modeling using tools like AutoCAD, RSA, and CBS.</p>
+      <div class="timeline">
+        <div class="timeline-item" data-year="2024" data-aos="fade-right">Licence en Génie Civil</div>
+        <div class="timeline-item" data-year="2022" data-aos="fade-left">DUT en Génie Civil</div>
+        <div class="timeline-item" data-year="2020" data-aos="fade-right">Baccalaureate - Sciences Expérimentales</div>
       </div>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section class="experience" id="experience" data-aos="fade-up">
+  <section class="experience" id="experience">
     <div class="container">
       <h2>Experience</h2>
       <div class="timeline">
-        <div class="card" data-aos="fade-right">
+        <div class="card" data-aos="fade-up">
           <h3>Agence Nationale des Equipements Publics (ANEP)</h3>
           <p class="date">Avril 2024 – Juin 2024 | Marrakech</p>
           <ul>
@@ -61,7 +60,7 @@
             <li>Ferraillage des éléments porteurs avec vérification des efforts horizontaux.</li>
           </ul>
         </div>
-        <div class="card" data-aos="fade-left">
+        <div class="card" data-aos="fade-up">
           <h3>BATI-ENGINEERING</h3>
           <p class="date">Juillet 2023 – Août 2023 | Settat</p>
           <ul>
@@ -75,34 +74,36 @@
   </section>
 
   <!-- Skills Section -->
-  <section class="skills" id="skills" data-aos="fade-up">
+  <section class="skills" id="skills">
     <div class="container">
       <h2>Technical Skills</h2>
-      <div class="skill-bar">
-        <p>AutoCAD</p>
-        <div class="progress"><div class="percent" style="width: 85%"></div></div>
-      </div>
-      <div class="skill-bar">
-        <p>Robot Structural Analysis (RSA)</p>
-        <div class="progress"><div class="percent" style="width: 80%"></div></div>
-      </div>
-      <div class="skill-bar">
-        <p>Concrete Building Structures (CBS)</p>
-        <div class="progress"><div class="percent" style="width: 75%"></div></div>
-      </div>
-      <div class="skill-bar">
-        <p>Revit</p>
-        <div class="progress"><div class="percent" style="width: 65%"></div></div>
-      </div>
-      <div class="skill-bar">
-        <p>MS Office 365</p>
-        <div class="progress"><div class="percent" style="width: 90%"></div></div>
+      <div class="skill-grid">
+        <div class="skill-card" data-percent="85%">
+          <div class="skill-name">AutoCAD</div>
+          <div class="bar"><div class="fill"></div></div>
+        </div>
+        <div class="skill-card" data-percent="80%">
+          <div class="skill-name">Robot Structural Analysis (RSA)</div>
+          <div class="bar"><div class="fill"></div></div>
+        </div>
+        <div class="skill-card" data-percent="75%">
+          <div class="skill-name">Concrete Building Structures (CBS)</div>
+          <div class="bar"><div class="fill"></div></div>
+        </div>
+        <div class="skill-card" data-percent="65%">
+          <div class="skill-name">Revit</div>
+          <div class="bar"><div class="fill"></div></div>
+        </div>
+        <div class="skill-card" data-percent="90%">
+          <div class="skill-name">MS Office 365</div>
+          <div class="bar"><div class="fill"></div></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="projects" id="projects" data-aos="fade-up">
+  <section class="projects" id="projects">
     <div class="container">
       <h2>Projects</h2>
       <div class="project-grid">
@@ -119,7 +120,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact" data-aos="fade-up">
+  <section class="contact" id="contact">
     <div class="container">
       <h2>Contact Me</h2>
       <form id="contact-form">
@@ -128,6 +129,14 @@
         <textarea placeholder="Your Message" required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section class="resume" id="resume">
+    <div class="container">
+      <h2>Download Resume</h2>
+      <iframe src="assets/CV.pdf" width="100%" height="600px" frameborder="0"></iframe>
     </div>
   </section>
 
