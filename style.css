@@ -169,13 +169,7 @@ section {
   transition: width 1s ease-in-out;
 }
 
-/* Tools Section */
-.tools ul {
-  list-style-position: inside;
-  padding-left: 1rem;
-}
-
-/* Projects Section */
+/* Projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
