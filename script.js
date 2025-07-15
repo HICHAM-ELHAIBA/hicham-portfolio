@@ -36,7 +36,7 @@ document.querySelectorAll('.skill-card').forEach(card => {
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
   emailjs.sendForm('service_abc123', 'template_xyz456', this);
-  alert('Message sent!');
+  alert('Message envoyé !');
 });
 
 // Modals
