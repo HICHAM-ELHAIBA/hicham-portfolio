@@ -1,241 +1,70 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+// AOS Animations
+AOS.init();
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+if (localStorage.getItem('darkMode') === 'enabled') {
+  body.classList.add('dark-mode');
+  document.querySelector('.theme-toggle i:first-child').style.display = 'none';
+  document.querySelector('.theme-toggle i:last-child').style.display = 'block';
 }
 
-body {
-  font-family: 'Orbitron', sans-serif;
-  line-height: 1.6;
-  background-color: #0e0e0e;
-  color: #fff;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.dark-mode {
-  background: #0e0e0e;
-  color: #eee;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem;
-}
-
-h1, h2, h3 {
-  margin-bottom: 1rem;
-  color: #00ffff;
-  text-transform: uppercase;
-}
-
-a {
-  color: #00ffff;
-  text-decoration: none;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #00ffff;
-  color: #000;
-  border-radius: 5px;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-.btn:hover {
-  background: #00cccc;
-  transform: scale(1.05);
-}
-
-/* Theme Toggle */
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  z-index: 1000;
-  font-size: 1.5rem;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 10px;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-.theme-toggle i {
-  display: none;
-}
-.theme-toggle i:first-child {
-  display: block;
-}
-.dark-mode .theme-toggle i:first-child {
-  display: none;
-}
-.dark-mode .theme-toggle i:last-child {
-  display: block;
-}
-.dark-mode .theme-toggle {
-  background: rgba(0, 0, 0, 0.4);
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #000000, #001f3f);
-  color: white;
-  text-align: center;
-  padding: 5rem 2rem;
-  position: relative;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 80%);
-  z-index: 1;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-}
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #00ffff;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 20px #00ffff;
-}
-
-/* Sections */
-section {
-  padding: 4rem 0;
-  background: #1a1a1a;
-  margin-bottom: 1rem;
-}
-.dark-mode section {
-  background: #1a1a1a;
-}
-
-.card {
-  background: #222;
-  padding: 1.5rem;
-  border-left: 5px solid #00ffff;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.date {
-  font-style: italic;
-  color: #888;
-}
-
-/* Skill Bars */
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-.skill-card {
-  background: #333;
-  padding: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.skill-card:hover {
-  transform: translateY(-5px);
-}
-.skill-name {
-  margin-bottom: 0.5rem;
-}
-.bar {
-  height: 10px;
-  background: #555;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.fill {
-  height: 100%;
-  background: linear-gradient(to right, #00ffff, #00cccc);
-  width: 0%;
-  transition: width 1s ease-in-out;
-}
-
-/* Tools Section */
-.tools ul {
-  list-style-position: inside;
-  padding-left: 1rem;
-}
-
-/* Projects Section */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-.project-card {
-  background: #222;
-  padding: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999;
-}
-.modal-content {
-  background: #222;
-  margin: 5% auto;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-}
-.modal span {
-  float: right;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #00ffff;
-}
-
-/* Footer */
-footer {
-  background: #000;
-  color: #888;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .profile-pic {
-    width: 100px;
-    height: 100px;
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  const icons = themeToggle.querySelectorAll('i');
+  icons.forEach(icon => icon.style.display = icon.style.display === 'none' ? 'block' : 'none');
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.setItem('darkMode', 'disabled');
   }
-  .container {
-    padding: 1.5rem;
-  }
-  .skill-grid {
-    grid-template-columns: 1fr;
-  }
+});
+
+// EmailJS Contact Form
+(function() {
+  emailjs.init("YOUR_USER_ID");
+})();
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  emailjs.sendForm('service_abc123', 'template_xyz456', this);
+  alert('Message sent!');
+});
+
+// Skill Bar Animations
+document.querySelectorAll('.skill-card').forEach(card => {
+  const percent = card.getAttribute('data-percent');
+  const fill = card.querySelector('.fill');
+  fill.style.width = percent;
+});
+
+// Modals
+function openModal(id) {
+  document.getElementById(id + '-modal').style.display = 'block';
 }
+function closeModal(id) {
+  document.getElementById(id + '-modal').style.display = 'none';
+}
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+};
+
+// GSAP Animations
+gsap.from(".hero-content", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  scrollTrigger: { trigger: ".hero", start: "top center" }
+});
+gsap.from(".timeline-item", {
+  opacity: 0,
+  x: -50,
+  stagger: 0.2,
+  scrollTrigger: { trigger: ".about", start: "top center" }
+});
