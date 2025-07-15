@@ -55,7 +55,7 @@ window.onclick = function(event) {
   });
 };
 
-// GSAP Animations
+// GSAP Scroll Animations
 gsap.from(".hero-content", {
   opacity: 0,
   y: 50,
