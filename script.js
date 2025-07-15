@@ -22,6 +22,13 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
+// Skill Bar Animations
+document.querySelectorAll('.skill-card').forEach(card => {
+  const percent = card.getAttribute('data-percent');
+  const fill = card.querySelector('.fill');
+  fill.style.width = percent;
+});
+
 // EmailJS Contact Form
 (function() {
   emailjs.init("YOUR_USER_ID");
@@ -30,13 +37,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
   emailjs.sendForm('service_abc123', 'template_xyz456', this);
   alert('Message sent!');
-});
-
-// Skill Bar Animations
-document.querySelectorAll('.skill-card').forEach(card => {
-  const percent = card.getAttribute('data-percent');
-  const fill = card.querySelector('.fill');
-  fill.style.width = percent;
 });
 
 // Modals
@@ -55,7 +55,7 @@ window.onclick = function(event) {
   });
 };
 
-// GSAP Animations
+// GSAP Scroll Animations
 gsap.from(".hero-content", {
   opacity: 0,
   y: 50,
