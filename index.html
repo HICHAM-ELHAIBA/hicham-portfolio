@@ -6,42 +6,43 @@
   <title>Hicham Elhaiba | Civil Engineer</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js "></script>
+  <script src="https://unpkg.com/ @lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body class="dark-mode">
 
-  <!-- Custom Cursor -->
-  <div class="cursor" id="customCursor"></div>
+  <!-- Theme Toggle -->
+  <label class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </label>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="overlay"></div>
     <div class="hero-content">
-      <div class="profile-container">
-        <img src="assets/images/1.jpg" alt="Profile Photo" class="profile-pic" />
-        <div class="glow"></div>
-      </div>
+      <img src="assets/images/1.jpg" alt="Profile Photo" class="profile-pic" />
       <h1>Hicham Elhaiba</h1>
       <p class="subtitle">Civil Engineering Technician</p>
+      <a href="assets/CV.pdf" download class="btn">Download Resume</a>
       <div class="socials">
-        <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/ " target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="mailto:hichame.elhaiba1@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1pxqjq1q.json" background="transparent" speed="1" style="width: 150px; height: 150px; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);" loop autoplay></lottie-player>
+    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_1pxqjq1q.json " background="transparent" speed="1" style="width: 150px; height: 150px; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);" loop autoplay></lottie-player>
   </section>
 
   <!-- About Section -->
   <section class="about" id="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>I’m a civil engineering technician with hands-on experience in reinforced concrete design, seismic analysis, and structural modeling using tools like AutoCAD, RSA, and CBS.</p>
+      <p>I am a civil engineering technician with hands-on experience in reinforced concrete design, seismic analysis, and structural modeling using tools like AutoCAD, RSA, and CBS.</p>
       <div class="timeline">
-        <div class="timeline-item" data-year="2024" data-aos="fade-right">Licence en Génie Civil</div>
-        <div class="timeline-item" data-year="2022" data-aos="fade-left">DUT en Génie Civil</div>
-        <div class="timeline-item" data-year="2020" data-aos="fade-right">Baccalaureate - Sciences Expérimentales</div>
+        <div class="timeline-item" data-aos="fade-right">Licence en Génie Civil (2024)</div>
+        <div class="timeline-item" data-aos="fade-left">DUT en Génie Civil (2022)</div>
+        <div class="timeline-item" data-aos="fade-right">Baccalaureate - Sciences Expérimentales (2020)</div>
       </div>
     </div>
   </section>
@@ -108,7 +109,7 @@
       <h2>Projects</h2>
       <div class="project-grid">
         <div class="project-card" onclick="openModal('project1')">
-          <h3>Etude Technique d’un Lycée</h3>
+          <h3>Étude Technique d’un Lycée</h3>
           <p>Plans de coffrage, étude sismique, estimation des coûts.</p>
         </div>
         <div class="project-card" onclick="openModal('project2')">
@@ -145,11 +146,11 @@
     <p>© 2025 Hicham Elhaiba. All rights reserved.</p>
   </footer>
 
-  <!-- Project Modal -->
+  <!-- Modals -->
   <div class="modal" id="project1-modal">
     <div class="modal-content">
       <span onclick="closeModal('project1')">×</span>
-      <h2>Etude Technique d’un Lycée</h2>
+      <h2>Étude Technique d’un Lycée</h2>
       <ul>
         <li>Réalisation des plans de coffrage.</li>
         <li>Étude sismique de la structure avec modélisation et vérification parasismique.</li>
@@ -169,8 +170,9 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos @next/dist/aos.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js "></script>
   <script src="script.js"></script>
 </body>
 </html>
