@@ -1,28 +1,42 @@
 // AOS Animations
 AOS.init();
 
-// Custom Cursor
-const cursor = document.getElementById('customCursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.pageX + 'px';
-  cursor.style.top = e.pageY + 'px';
-});
+// Dark Mode Toggle
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
 
-// Skill Bar Animation
-document.querySelectorAll('.skill-card').forEach(card => {
-  const percent = card.getAttribute('data-percent');
-  const fill = card.querySelector('.fill');
-  fill.style.width = percent;
+if (localStorage.getItem('darkMode') === 'enabled') {
+  body.classList.add('dark-mode');
+  document.querySelector('.theme-toggle i:first-child').style.display = 'none';
+  document.querySelector('.theme-toggle i:last-child').style.display = 'block';
+}
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  const icons = themeToggle.querySelectorAll('i');
+  icons.forEach(icon => icon.style.display = icon.style.display === 'none' ? 'block' : 'none');
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.setItem('darkMode', 'disabled');
+  }
 });
 
 // EmailJS Contact Form
 (function() {
-  emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+  emailjs.init("YOUR_USER_ID");
 })();
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
-  emailjs.sendForm('service_abc123', 'template_xyz456', this); // Replace with your Service & Template IDs
+  emailjs.sendForm('service_abc123', 'template_xyz456', this);
   alert('Message sent!');
+});
+
+// Skill Bar Animations
+document.querySelectorAll('.skill-card').forEach(card => {
+  const percent = card.getAttribute('data-percent');
+  const fill = card.querySelector('.fill');
+  fill.style.width = percent;
 });
 
 // Modals
@@ -40,3 +54,17 @@ window.onclick = function(event) {
     }
   });
 }
+
+// GSAP Animations
+gsap.from(".hero-content", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  scrollTrigger: { trigger: ".hero", start: "top center" }
+});
+gsap.from(".timeline-item", {
+  opacity: 0,
+  x: -50,
+  stagger: 0.2,
+  scrollTrigger: { trigger: ".about", start: "top center" }
+});
