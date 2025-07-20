@@ -1,6 +1,3 @@
-// AOS Animations
-AOS.init();
-
 // Dark Mode Toggle
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
@@ -44,17 +41,3 @@ window.onclick = function(event) {
     }
   });
 };
-
-// GSAP Scroll Animations
-gsap.from(".hero-content", {
-  opacity: 0,
-  y: 50,
-  duration: 1,
-  scrollTrigger: { trigger: ".hero", start: "top center" }
-});
-gsap.from(".timeline-item", {
-  opacity: 0,
-  x: -50,
-  stagger: 0.2,
-  scrollTrigger: { trigger: ".about", start: "top center" }
-});
