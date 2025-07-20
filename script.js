@@ -1,16 +1,17 @@
 // Dark Mode Toggle
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
+const icons = themeToggle.querySelectorAll('i');
 
+// Load saved theme
 if (localStorage.getItem('darkMode') === 'enabled') {
   body.classList.add('dark-mode');
-  document.querySelector('.theme-toggle i:first-child').style.display = 'none';
-  document.querySelector('.theme-toggle i:last-child').style.display = 'block';
+  icons[0].style.display = 'none';
+  icons[1].style.display = 'block';
 }
 
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
-  const icons = themeToggle.querySelectorAll('i');
   icons.forEach(icon => icon.style.display = icon.style.display === 'none' ? 'block' : 'none');
   if (body.classList.contains('dark-mode')) {
     localStorage.setItem('darkMode', 'enabled');
@@ -33,6 +34,9 @@ function openModal(id) {
 function closeModal(id) {
   document.getElementById(id + '-modal').style.display = 'none';
 }
+window.openModal = openModal;
+window.closeModal = closeModal;
+
 window.onclick = function(event) {
   const modals = document.querySelectorAll('.modal');
   modals.forEach(modal => {
