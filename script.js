@@ -29,17 +29,7 @@ document.querySelectorAll('.skill-card').forEach(card => {
   fill.style.width = percent;
 });
 
-// EmailJS Contact Form
-(function() {
-  emailjs.init("YOUR_USER_ID");
-})();
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  emailjs.sendForm('service_abc123', 'template_xyz456', this);
-  alert('Message envoyé !');
-});
-
-// Modals
+// Modal Functions
 function openModal(id) {
   document.getElementById(id + '-modal').style.display = 'block';
 }
