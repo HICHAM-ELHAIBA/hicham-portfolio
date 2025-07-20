@@ -7,11 +7,11 @@
   <title>Hicham Elhaiba | Civil Engineering Technician</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js "></script>
+  <link rel="stylesheet" href=" https://unpkg.com/aos @next/dist/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js "></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos @next/dist/aos.css" />
 </head>
-<body class="light-mode" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+<body class="light-mode">
 
   <!-- Theme Toggle -->
   <label class="theme-toggle" id="themeToggle">
@@ -28,8 +28,8 @@
       <p class="subtitle">Technicien Supérieur en Génie Civil</p>
       <a href="assets/CV.pdf" download class="btn">Télécharger le CV</a>
       <div class="socials">
-        <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/ " target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:hichame.elhaiba1@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/ " target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="mailto:hichame.elhaiba1@gmail.com"><i class="fas fa-envelope"></i> Email</a>
       </div>
     </div>
   </section>
@@ -135,16 +135,16 @@
           <h3>Étude Technique d’un Lycée</h3>
           <ul>
             <li>Réalisation des plans de coffrage</li>
-            <li>Étude sismique de la structure avec modélisation parasismique</li>
+            <li>Étude sismique avec modélisation parasismique</li>
             <li>Estimation du métré et des coûts</li>
-            <li>Utilisation d'AutoCAD et RSA</li>
+            <li>Utilisation d’AutoCAD et RSA</li>
           </ul>
         </div>
         <div class="project-card" onclick="openModal('project2')">
           <h3>Projet de Bâtiment R+2</h3>
           <ul>
             <li>Pré-dimensionnement manuel et avec CBS</li>
-            <li>Calcul du ferraillage manuel et via RSA</li>
+            <li>Ferraillage avec RSA</li>
             <li>Estimation des quantités de matériaux</li>
             <li>Supervision sur site</li>
           </ul>
@@ -152,8 +152,8 @@
         <div class="project-card" onclick="openModal('project3')">
           <h3>Étude en Cours : Chaussées Routières</h3>
           <ul>
-            <li>Dimensionnement selon les normes GMTR</li>
-            <li>Calcul des épaisseurs des couches de chaussée (surface, base, sous-base, fondation)</li>
+            <li>Dimensionnement selon GMTR</li>
+            <li>Calcul des épaisseurs des couches de chaussée</li>
             <li>Intégration des conditions géotechniques locales</li>
           </ul>
         </div>
@@ -177,12 +177,13 @@
   <section class="contact" id="contact">
     <div class="container" data-aos="fade-up">
       <h2>Contact</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Votre Nom" required>
-        <input type="email" placeholder="Votre Email" required>
-        <textarea placeholder="Votre Message" required></textarea>
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
+      <p class="contact-info">
+        Vous pouvez me contacter via :
+      </p>
+      <div class="contact-buttons">
+        <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/ " target="_blank" class="btn">Me contacter sur LinkedIn</a>
+        <a href="mailto:hichame.elhaiba1@gmail.com" class="btn">Me contacter par Email</a>
+      </div>
     </div>
   </section>
 
@@ -206,7 +207,7 @@
       <h2>Étude Technique d’un Lycée</h2>
       <ul>
         <li>Réalisation des plans de coffrage pour les éléments en béton armé</li>
-        <li>Étude sismique avec modélisation et vérification parasismique</li>
+        <li>Étude sismique de la structure avec modélisation et vérification parasismique</li>
         <li>Estimation du métré et des coûts avec Excel</li>
         <li>Collaboration avec les architectes pour la validation des plans</li>
       </ul>
@@ -239,7 +240,6 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos @next/dist/aos.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js "></script>
   <script src="script.js"></script>
 </body>
 </html>
