@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of Hicham Elhaiba - Civil Engineering Technician with expertise in AutoCAD, RSA, and structural analysis">
+  <meta name="description" content="Portfolio of Hicham Elhaiba - Civil Engineering Technician">
   <title>Hicham Elhaiba | Civil Engineering Technician</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome for Icons -->
-  <script src=" https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous"></script>
   <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos @2.3.4/dist/aos.css" rel="stylesheet">
+  <link href=" https://unpkg.com/aos @2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome (for LinkedIn/Email icons) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous"></script>
 </head>
 <body class="light-mode">
 
-  <!-- Theme Toggle -->
+  <!-- Theme Toggle with Custom Icons -->
   <label class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
-    <i class="fas fa-moon"></i>
-    <i class="fas fa-sun"></i>
+    <img src="assets/icons/moon.svg" alt="Dark Mode" class="icon dark-icon" />
+    <img src="assets/icons/sun.svg" alt="Light Mode" class="icon light-icon" />
   </label>
 
   <!-- Hero Section -->
@@ -39,7 +40,7 @@
   <section class="about" id="about" data-aos="fade-up">
     <div class="container">
       <h2>À Propos</h2>
-      <p>Je suis un technicien supérieur en génie civil, titulaire d’un DUT en génie civil (2024) et d’une Licence professionnelle en génie civil (2025). J’ai renforcé mes compétences techniques à travers plusieurs stages en conception, dimensionnement et études techniques. Passionné par le secteur du BTP, je cherche à intégrer un stage combinant bureau d’études et visites de chantiers pour développer mes compétences sur le terrain et en coordination technique.</p>
+      <p>Titulaire d’un DUT et d’une Licence Professionnelle en Génie Civil, j’ai renforcé mes compétences à travers plusieurs stages en conception de structures, analyse sismique, et modélisation avec des outils comme AutoCAD, RSA, et CBS. Passionné par le BTP, je cherche à intégrer un stage combinant bureau d’études et visites de chantiers pour développer mes compétences sur le terrain et en coordination technique.</p>
     </div>
   </section>
 
@@ -60,20 +61,20 @@
     <div class="container">
       <h2>Expérience Professionnelle</h2>
       <div class="timeline">
-        <div class="card">
+        <div class="card" data-aos="fade-right">
           <h3>Agence Nationale des Equipements Publics (ANEP)</h3>
           <p class="date">Avril 2024 – Juin 2024 | Marrakech</p>
           <ul>
             <li><strong>Conception des plans de béton armé :</strong> Analyse approfondie des plans architecturaux, pré-dimensionnement des éléments porteurs avec CBS, création des plans de coffrage pour plusieurs blocs d’un lycée.</li>
-            <li><strong>Étude parasismique :</strong> Modélisation de la structure par éléments finis, analyse modale avec RSA, vérification des déplacements latéraux inter-étages et globaux, stabilité au renversement.</li>
-            <li><strong>Ferraillage des éléments porteurs :</strong> Réglage des paramètres de ferraillage, lancement du ferraillage avec RSA, vérification que le ferraillage résiste aux efforts horizontaux, élaboration du plan de béton armé.</li>
+            <li><strong>Étude parasismique :</strong> Modélisation par éléments finis, analyse modale avec RSA, vérification des déplacements latéraux inter-étages et globaux, stabilité au renversement.</li>
+            <li><strong>Ferraillage des éléments porteurs :</strong> Réglage des paramètres, lancement avec RSA, vérification des efforts horizontaux, élaboration du plan de béton armé.</li>
           </ul>
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-left">
           <h3>BATI-ENGINEERING</h3>
           <p class="date">Juillet 2023 – Août 2023 | Settat</p>
           <ul>
-            <li><strong>Conception des plans de béton armé :</strong> Analyse approfondie des plans architecturaux d’un bâtiment R+2, pré-dimensionnement manuel et avec CBS, ferraillage via RSA pour sections optimisées.</li>
+            <li><strong>Conception des plans de béton armé :</strong> Analyse approfondie des plans architecturaux d’un bâtiment R+2, pré-dimensionnement manuel et avec CBS, ferraillage via RSA.</li>
             <li><strong>Étude parasismique :</strong> Modélisation éléments finis, vérification des déplacements latéraux inter-étages.</li>
             <li><strong>Visites techniques :</strong> Supervision de l’implantation des structures sur site.</li>
           </ul>
@@ -136,7 +137,7 @@
     <div class="container">
       <h2>Projets Académiques</h2>
       <div class="project-grid">
-        <div class="project-card" onclick="openModal('project1')">
+        <div class="project-card" onclick="openModal('project1')" data-aos="zoom-in">
           <h3>Étude Technique d’un Lycée</h3>
           <ul>
             <li>Réalisation des plans de coffrage</li>
@@ -145,7 +146,7 @@
             <li>Utilisation d’AutoCAD et RSA</li>
           </ul>
         </div>
-        <div class="project-card" onclick="openModal('project2')">
+        <div class="project-card" onclick="openModal('project2')" data-aos="zoom-in">
           <h3>Projet de Bâtiment R+2</h3>
           <ul>
             <li>Pré-dimensionnement manuel et avec CBS</li>
@@ -154,10 +155,10 @@
             <li>Supervision sur site</li>
           </ul>
         </div>
-        <div class="project-card" onclick="openModal('project3')">
+        <div class="project-card" onclick="openModal('project3')" data-aos="zoom-in">
           <h3>Étude en Cours : Chaussées Routières</h3>
           <ul>
-            <li>Dimensionnement selon les normes GMTR</li>
+            <li>Dimensionnement selon GMTR</li>
             <li>Calcul des épaisseurs des couches de chaussée</li>
             <li>Intégration des conditions géotechniques locales</li>
           </ul>
@@ -239,7 +240,7 @@
         <li>Intégration des conditions géotechniques locales</li>
       </ul>
     </div>
-  </div>
+  </section>
 
   <!-- Scripts -->
   <script src="script.js"></script>
