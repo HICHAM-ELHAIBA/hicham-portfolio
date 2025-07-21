@@ -1,244 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of Hicham Elhaiba - Civil Engineering Technician">
-  <title>Hicham Elhaiba | Civil Engineering Technician</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <script src=" https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hicham Elhaiba | Technicien Supérieur en Génie Civil</title>
+    <meta name="description" content="Portfolio de Hicham Elhaiba, technicien supérieur en Génie Civil spécialisé en conception de structures et études techniques.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-mode">
+<body>
 
-  <!-- Theme Toggle -->
-  <label class="theme-toggle" id="themeToggle">
-    <img src="assets/icons/moon.svg" alt="Dark Mode" class="icon dark-icon" />
-    <img src="assets/icons/sun.svg" alt="Light Mode" class="icon light-icon" />
-  </label>
+    <!-- =========== HEADER & NAVIGATION =========== -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">Hicham E.</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">Profil</a></li>
+                <li class="nav-item"><a href="#formation" class="nav-link">Formation</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Expériences</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projets</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="assets/images/1.jpg" alt="Profile Photo" class="profile-pic" />
-      <h1>Hicham Elhaiba</h1>
-      <p class="subtitle">Technicien Supérieur en Génie Civil</p>
-      <a href="assets/CV.pdf" download class="btn">Télécharger le CV</a>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/ " target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-        <a href="mailto:hichame.elhaiba1@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-      </div>
-    </div>
-  </section>
+    <main>
+        <!-- =========== HERO SECTION =========== -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-aos="fade-down">Hicham Elhaiba</h1>
+                <p class="subtitle" data-aos="fade-down" data-aos-delay="200">Technicien Supérieur en Génie Civil</p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                    <a href="assets/CV.pdf" download="CV-Hicham-Elhaiba.pdf" class="btn btn-secondary">Télécharger mon CV</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container hover-effect">
-      <h2>À Propos</h2>
-      <p>Titulaire d’un DUT et d’une Licence Professionnelle en Génie Civil, j’ai renforcé mes compétences à travers plusieurs stages en conception de structures et études techniques. Passionné par le BTP, je cherche à intégrer un stage combinant bureau d’études et visites de chantiers pour développer mes compétences sur le terrain et en coordination technique.</p>
-    </div>
-  </section>
+        <!-- =========== ABOUT ME =========== -->
+        <section id="about" class="container">
+            <h2 class="section-title" data-aos="fade-up">Profil</h2>
+            <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/images/profile.jpg" alt="Photo de Hicham Elhaiba" class="profile-pic">
+                <p>Titulaire d'un DUT et prochainement d'une Licence Professionnelle en Génie Civil, j'ai renforcé mes compétences en conception de structures et études techniques à travers plusieurs stages. Passionné par le bâtiment et les infrastructures, je cherche à intégrer un bureau d'études pour mettre en pratique mes compétences en conception, modélisation et coordination technique sur le terrain.</p>
+            </div>
+        </section>
 
-  <!-- Education Section -->
-  <section class="education" id="education">
-    <div class="container hover-effect">
-      <h2>Formations</h2>
-      <div class="timeline">
-        <div class="timeline-item">Licence en Génie Civil (2025) – École Supérieure de Technologie de Salé</div>
-        <div class="timeline-item">DUT en Génie Civil (2024) – École Supérieure de Technologie de Fkih Ben Salah</div>
-        <div class="timeline-item">Baccalaureate – Sciences Expérimentales (2022) – Lycée Errazi, Settat</div>
-      </div>
-    </div>
-  </section>
+        <!-- =========== FORMATION (EDUCATION) =========== -->
+        <section id="formation" class="container">
+            <h2 class="section-title" data-aos="fade-up">Formation</h2>
+            <div class="timeline" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>Licence en Génie Civil</h3>
+                        <p>École Supérieure de Technologie de Salé</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>DUT en Génie Civil</h3>
+                        <p>École Supérieure de Technologie de Fkih Ben Salah</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Baccalauréat Sciences Expérimentales</h3>
+                        <p>Lycée Errazi à Settat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Experience Section -->
-  <section class="experience" id="experience">
-    <div class="container">
-      <h2>Expérience Professionnelle</h2>
-      <div class="timeline">
-        <div class="card hover-effect">
-          <h3>Agence Nationale des Equipements Publics (ANEP)</h3>
-          <p class="date">Avril 2024 – Juin 2024 | Marrakech</p>
-          <ul>
-            <li><strong>Conception des plans de béton armé :</strong> Analyse approfondie des plans architecturaux, pré-dimensionnement des éléments porteurs avec CBS, création des plans de coffrage pour plusieurs blocs d’un lycée.</li>
-            <li><strong>Étude parasismique :</strong> Modélisation par éléments finis, analyse modale avec RSA, vérification des déplacements latéraux inter-étages et globaux, stabilité au renversement.</li>
-            <li><strong>Ferraillage des éléments porteurs :</strong> Réglage des paramètres de ferraillage, lancement du ferraillage avec RSA, vérification que le ferraillage résiste aux efforts horizontaux, élaboration du plan de béton armé.</li>
-          </ul>
-        </div>
-        <div class="card hover-effect">
-          <h3>BATI-ENGINEERING</h3>
-          <p class="date">Juillet 2023 – Août 2023 | Settat</p>
-          <ul>
-            <li><strong>Conception des plans de béton armé :</strong> Analyse approfondie des plans architecturaux d’un bâtiment R+2, pré-dimensionnement manuel et avec CBS, ferraillage via RSA pour sections optimisées.</li>
-            <li><strong>Étude parasismique :</strong> Modélisation éléments finis, vérification des déplacements latéraux inter-étages.</li>
-            <li><strong>Visites techniques :</strong> Supervision de l’implantation des structures sur site.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- =========== EXPERIENCES =========== -->
+        <section id="experience" class="container">
+            <h2 class="section-title" data-aos="fade-up">Expériences Professionnelles</h2>
+            <div class="experience-grid">
+                <div class="experience-card" data-aos="fade-up">
+                    <p class="experience-date">AVRIL 2024 - JUIN 2024</p>
+                    <h3>Stagiaire - Agence Nationale des Équipements Publics</h3>
+                    <p class="experience-location">Marrakech</p>
+                    <ul>
+                        <li>Conception de plans de béton armé pour plusieurs blocs d'un lycée.</li>
+                        <li>Étude parasismique : modélisation de structure par éléments finis avec RSA.</li>
+                        <li>Vérification de la stabilité et ferraillage des éléments porteurs.</li>
+                    </ul>
+                </div>
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+                    <p class="experience-date">JUILLET 2023 - AOÛT 2023</p>
+                    <h3>Stagiaire - BATI-ENGINEERING</h3>
+                    <p class="experience-location">Settat</p>
+                    <ul>
+                        <li>Conception des plans de béton armé pour un bâtiment R+2.</li>
+                        <li>Pré-dimensionnement manuel et assisté par le logiciel CBS.</li>
+                        <li>Calcul de ferraillage avec RSA pour optimiser les sections d'acier.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <div class="container hover-effect">
-      <h2>Compétences Techniques</h2>
-      <div class="skill-grid">
-        <div class="skill-card" data-percent="85%">
-          <div class="skill-name">AutoCAD</div>
-          <div class="bar"><div class="fill"></div></div>
-        </div>
-        <div class="skill-card" data-percent="80%">
-          <div class="skill-name">Robot Structural Analysis (RSA)</div>
-          <div class="bar"><div class="fill"></div></div>
-        </div>
-        <div class="skill-card" data-percent="75%">
-          <div class="skill-name">Concrete Building Structures (CBS)</div>
-          <div class="bar"><div class="fill"></div></div>
-        </div>
-        <div class="skill-card" data-percent="65%">
-          <div class="skill-name">Revit</div>
-          <div class="bar"><div class="fill"></div></div>
-        </div>
-        <div class="skill-card" data-percent="90%">
-          <div class="skill-name">MS Office 365</div>
-          <div class="bar"><div class="fill"></div></div>
-        </div>
-        <div class="skill-card" data-percent="80%">
-          <div class="skill-name">Analyse Sismique</div>
-          <div class="bar"><div class="fill"></div></div>
-        </div>
-        <div class="skill-card" data-percent="75%">
-          <div class="skill-name">Dimensionnement des Chaussées (GMTR)</div>
-          <div class="bar"><div class="fill"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- =========== ACADEMIC PROJECTS =========== -->
+        <section id="projects" class="container">
+            <h2 class="section-title" data-aos="fade-up">Projets Académiques</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <img src="assets/images/project1.jpg" alt="Projet Étude d'un Lycée">
+                    <div class="project-info">
+                        <h3>Étude Technique d'un Lycée</h3>
+                        <p>Étude complète incluant la création des plans de coffrage, la modélisation et vérification parasismique, et l'estimation des coûts.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/project2.jpg" alt="Projet Bâtiment R+2">
+                    <div class="project-info">
+                        <h3>Projet de Bâtiment R+2</h3>
+                        <p>Conception de plans en béton armé (coffrage et ferraillage), prédimensionnement des éléments porteurs et quantification des matériaux.</p>
+                    </div>
+                </div>
+                <!-- Add another project card if needed -->
+            </div>
+        </section>
 
-  <!-- Tools & Standards -->
-  <section class="tools" id="tools">
-    <div class="container hover-effect">
-      <h2>Outils & Normes</h2>
-      <ul>
-        <li><strong>Logiciels :</strong> AutoCAD, RSA, CBS, Revit, MS Office 365</li>
-        <li><strong>Normes :</strong> Eurocodes, BAEL91 modifié 99, DTU, NF P06-001, GMTR (dimensionnement des chaussées)</li>
-        <li><strong>Compétences :</strong> Plans de coffrage, modélisation sismique, pré-dimensionnement, estimation des quantités</li>
-      </ul>
-    </div>
-  </section>
+        <!-- =========== CONTACT ME =========== -->
+        <section id="contact" class="container">
+            <h2 class="section-title" data-aos="fade-up">Contactez-moi</h2>
+            <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="100">N'hésitez pas à me contacter pour toute opportunité ou collaboration.</p>
+            <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Votre Nom" required>
+                    <input type="email" name="email" placeholder="Votre Email" required>
+                    <textarea name="message" rows="5" placeholder="Votre Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Informations</h3>
+                    <p><strong>Email:</strong><br> <a href="mailto:hichame.elhaiba1@gmail.com">hichame.elhaiba1@gmail.com</a></p>
+                    <p><strong>Téléphone:</strong><br> <a href="tel:+212622095283">+212 6 22 09 52 83</a></p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub Profile">
+                           <!-- Replace with your SVG icon or an img tag -->
+                           <img src="assets/icons/github.svg" alt="GitHub">
+                        </a>
+                        <a href="#" aria-label="LinkedIn Profile">
+                           <!-- Replace with your SVG icon or an img tag -->
+                           <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <div class="container">
-      <h2>Projets Académiques</h2>
-      <div class="project-grid">
-        <div class="project-card hover-effect" onclick="openModal('project1')">
-          <h3>Étude Technique d’un Lycée</h3>
-          <ul>
-            <li>Réalisation des plans de coffrage</li>
-            <li>Étude sismique avec modélisation parasismique</li>
-            <li>Estimation du métré et des coûts</li>
-            <li>Utilisation d’AutoCAD et RSA</li>
-          </ul>
-        </div>
-        <div class="project-card hover-effect" onclick="openModal('project2')">
-          <h3>Projet de Bâtiment R+2</h3>
-          <ul>
-            <li>Pré-dimensionnement manuel et avec CBS</li>
-            <li>Ferraillage avec RSA</li>
-            <li>Estimation des quantités de matériaux</li>
-            <li>Supervision sur site</li>
-          </ul>
-        </div>
-        <div class="project-card hover-effect" onclick="openModal('project3')">
-          <h3>Étude en Cours : Chaussées Routières</h3>
-          <ul>
-            <li>Dimensionnement selon les normes GMTR</li>
-            <li>Calcul des épaisseurs des couches de chaussée</li>
-            <li>Intégration des conditions géotechniques locales</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Languages Section -->
-  <section class="languages" id="languages">
-    <div class="container hover-effect">
-      <h2>Langues</h2>
-      <ul>
-        <li><strong>Arabe :</strong> Langue maternelle</li>
-        <li><strong>Français :</strong> Bon niveau professionnel</li>
-        <li><strong>Anglais :</strong> Compétence technique (intermédiaire)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container hover-effect">
-      <h2>Contact</h2>
-      <p class="contact-info">Vous pouvez me contacter via :</p>
-      <div class="contact-buttons">
-        <a href="https://www.linkedin.com/in/hicham-elhaiba-9a56b52b4/ " target="_blank" class="btn">Me contacter sur LinkedIn</a>
-        <a href="mailto:hichame.elhaiba1@gmail.com" class="btn">Me contacter par Email</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resume Section -->
-  <section class="resume" id="resume">
-    <div class="container hover-effect">
-      <h2>Télécharger le CV</h2>
-      <iframe src="assets/CV.pdf" width="100%" height="600px" frameborder="0"></iframe>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Hicham Elhaiba. Tous droits réservés.</p>
-  </footer>
-
-  <!-- Project Modals -->
-  <div class="modal" id="project1-modal">
-    <div class="modal-content">
-      <span onclick="closeModal('project1')">× Close</span>
-      <h2>Étude Technique d’un Lycée</h2>
-      <ul>
-        <li>Réalisation des plans de coffrage pour les éléments en béton armé</li>
-        <li>Étude sismique avec modélisation et vérification parasismique</li>
-        <li>Estimation du métré et des coûts avec Excel</li>
-        <li>Collaboration avec les architectes pour la validation des plans</li>
-      </ul>
-    </div>
-  </div>
-  <div class="modal" id="project2-modal">
-    <div class="modal-content">
-      <span onclick="closeModal('project2')">× Close</span>
-      <h2>Projet R+2</h2>
-      <ul>
-        <li>Pré-dimensionnement manuel et avec CBS</li>
-        <li>Ferraillage avec RSA et vérification des sections d’acier</li>
-        <li>Estimation des quantités de matériaux pour la planification des coûts</li>
-        <li>Supervision des implantations structurelles sur site</li>
-      </ul>
-    </div>
-  </div>
-  <div class="modal" id="project3-modal">
-    <div class="modal-content">
-      <span onclick="closeModal('project3')">× Close</span>
-      <h2>Étude en Cours : Chaussées Routières</h2>
-      <ul>
-        <li>Dimensionnement des chaussées routières et aéroportuaires</li>
-        <li>Normes : GMTR (Guide Technique de Dimensionnement des Chaussées Neutres)</li>
-        <li>Calcul des épaisseurs des couches de chaussée (surface, base, sous-base, fondation)</li>
-        <li>Intégration des conditions géotechniques locales</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="script.js"></script>
+    <!-- =========== FOOTER =========== -->
+    <footer class="footer">
+        <p>© 2025 Hicham Elhaiba. Tous droits réservés.</p>
+        <a href="#" class="back-to-top" aria-label="Retour en haut">↑</a>
+    </footer>
+    
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 </body>
 </html>
