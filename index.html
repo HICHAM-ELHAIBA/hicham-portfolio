@@ -10,12 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- AOS Animations -->
   <link href=" https://unpkg.com/aos @2.3.4/dist/aos.css" rel="stylesheet">
-  <!-- Font Awesome (for LinkedIn/Email icons) -->
-  <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous"></script>
 </head>
 <body class="light-mode">
 
-  <!-- Theme Toggle with Custom Icons -->
+  <!-- Theme Toggle (Custom Icons) -->
   <label class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
     <img src="assets/icons/moon.svg" alt="Dark Mode" class="icon dark-icon" />
     <img src="assets/icons/sun.svg" alt="Light Mode" class="icon light-icon" />
@@ -38,20 +36,20 @@
 
   <!-- About Section -->
   <section class="about" id="about" data-aos="fade-up">
-    <div class="container">
+    <div class="container hover-effect">
       <h2>À Propos</h2>
-      <p>Titulaire d’un DUT et d’une Licence Professionnelle en Génie Civil, j’ai renforcé mes compétences à travers plusieurs stages en conception de structures, analyse sismique, et modélisation avec des outils comme AutoCAD, RSA, et CBS. Passionné par le BTP, je cherche à intégrer un stage combinant bureau d’études et visites de chantiers pour développer mes compétences sur le terrain et en coordination technique.</p>
+      <p>Titulaire d’un DUT et d’une Licence Professionnelle en Génie Civil, j’ai renforcé mes compétences à travers plusieurs stages en conception, dimensionnement et études techniques. Passionné par le secteur du BTP, je cherche à intégrer un stage combinant bureau d’études et visites de chantiers pour développer mes compétences sur le terrain et en coordination technique.</p>
     </div>
   </section>
 
   <!-- Education Section -->
   <section class="education" id="education" data-aos="fade-up">
-    <div class="container">
+    <div class="container hover-effect">
       <h2>Formations</h2>
       <div class="timeline">
         <div class="timeline-item">Licence en Génie Civil (2025) – École Supérieure de Technologie de Salé</div>
         <div class="timeline-item">DUT en Génie Civil (2024) – École Supérieure de Technologie de Fkih Ben Salah</div>
-        <div class="timeline-item">Baccalaureate – Sciences Expérimentales (2022) – Lycée Errazi, Settat</div>
+        <div class="timeline-item">Baccalaureat – Sciences Expérimentales (2022) – Lycée Errazi, Settat</div>
       </div>
     </div>
   </section>
@@ -61,20 +59,20 @@
     <div class="container">
       <h2>Expérience Professionnelle</h2>
       <div class="timeline">
-        <div class="card" data-aos="fade-right">
+        <div class="card hover-effect">
           <h3>Agence Nationale des Equipements Publics (ANEP)</h3>
           <p class="date">Avril 2024 – Juin 2024 | Marrakech</p>
           <ul>
             <li><strong>Conception des plans de béton armé :</strong> Analyse approfondie des plans architecturaux, pré-dimensionnement des éléments porteurs avec CBS, création des plans de coffrage pour plusieurs blocs d’un lycée.</li>
             <li><strong>Étude parasismique :</strong> Modélisation par éléments finis, analyse modale avec RSA, vérification des déplacements latéraux inter-étages et globaux, stabilité au renversement.</li>
-            <li><strong>Ferraillage des éléments porteurs :</strong> Réglage des paramètres, lancement avec RSA, vérification des efforts horizontaux, élaboration du plan de béton armé.</li>
+            <li><strong>Ferraillage des éléments porteurs :</strong> Réglage des paramètres de ferraillage, lancement du ferraillage avec RSA, vérification que le ferraillage résiste aux efforts horizontaux, élaboration du plan de béton armé.</li>
           </ul>
         </div>
-        <div class="card" data-aos="fade-left">
+        <div class="card hover-effect">
           <h3>BATI-ENGINEERING</h3>
           <p class="date">Juillet 2023 – Août 2023 | Settat</p>
           <ul>
-            <li><strong>Conception des plans de béton armé :</strong> Analyse approfondie des plans architecturaux d’un bâtiment R+2, pré-dimensionnement manuel et avec CBS, ferraillage via RSA.</li>
+            <li><strong>Conception des plans de béton armé :</strong> Analyse approfondie des plans architecturaux d’un bâtiment R+2, pré-dimensionnement manuel et avec CBS, ferraillage via RSA pour sections optimisées.</li>
             <li><strong>Étude parasismique :</strong> Modélisation éléments finis, vérification des déplacements latéraux inter-étages.</li>
             <li><strong>Visites techniques :</strong> Supervision de l’implantation des structures sur site.</li>
           </ul>
@@ -85,7 +83,7 @@
 
   <!-- Skills Section -->
   <section class="skills" id="skills" data-aos="fade-up">
-    <div class="container">
+    <div class="container hover-effect">
       <h2>Compétences Techniques</h2>
       <div class="skill-grid">
         <div class="skill-card" data-percent="85%">
@@ -122,7 +120,7 @@
 
   <!-- Tools & Standards -->
   <section class="tools" id="tools" data-aos="fade-up">
-    <div class="container">
+    <div class="container hover-effect">
       <h2>Outils & Normes</h2>
       <ul>
         <li><strong>Logiciels :</strong> AutoCAD, RSA, CBS, Revit, MS Office 365</li>
@@ -137,7 +135,7 @@
     <div class="container">
       <h2>Projets Académiques</h2>
       <div class="project-grid">
-        <div class="project-card" onclick="openModal('project1')" data-aos="zoom-in">
+        <div class="project-card hover-effect" onclick="openModal('project1')">
           <h3>Étude Technique d’un Lycée</h3>
           <ul>
             <li>Réalisation des plans de coffrage</li>
@@ -146,7 +144,7 @@
             <li>Utilisation d’AutoCAD et RSA</li>
           </ul>
         </div>
-        <div class="project-card" onclick="openModal('project2')" data-aos="zoom-in">
+        <div class="project-card hover-effect" onclick="openModal('project2')">
           <h3>Projet de Bâtiment R+2</h3>
           <ul>
             <li>Pré-dimensionnement manuel et avec CBS</li>
@@ -155,10 +153,10 @@
             <li>Supervision sur site</li>
           </ul>
         </div>
-        <div class="project-card" onclick="openModal('project3')" data-aos="zoom-in">
+        <div class="project-card hover-effect" onclick="openModal('project3')">
           <h3>Étude en Cours : Chaussées Routières</h3>
           <ul>
-            <li>Dimensionnement selon GMTR</li>
+            <li>Dimensionnement selon les normes GMTR</li>
             <li>Calcul des épaisseurs des couches de chaussée</li>
             <li>Intégration des conditions géotechniques locales</li>
           </ul>
@@ -169,7 +167,7 @@
 
   <!-- Languages Section -->
   <section class="languages" id="languages" data-aos="fade-up">
-    <div class="container">
+    <div class="container hover-effect">
       <h2>Langues</h2>
       <ul>
         <li><strong>Arabe :</strong> Langue maternelle</li>
@@ -181,7 +179,7 @@
 
   <!-- Contact Section -->
   <section class="contact" id="contact" data-aos="fade-up">
-    <div class="container">
+    <div class="container hover-effect">
       <h2>Contact</h2>
       <p class="contact-info">Vous pouvez me contacter via :</p>
       <div class="contact-buttons">
@@ -193,7 +191,7 @@
 
   <!-- Resume Section -->
   <section class="resume" id="resume" data-aos="fade-up">
-    <div class="container">
+    <div class="container hover-effect">
       <h2>Télécharger le CV</h2>
       <iframe src="assets/CV.pdf" width="100%" height="600px" frameborder="0"></iframe>
     </div>
@@ -205,7 +203,7 @@
   </footer>
 
   <!-- Project Modals -->
-  <div class="modal" id="project1-modal" data-aos="zoom-in">
+  <div class="modal" id="project1-modal">
     <div class="modal-content">
       <span onclick="closeModal('project1')">×</span>
       <h2>Étude Technique d’un Lycée</h2>
@@ -217,7 +215,7 @@
       </ul>
     </div>
   </div>
-  <div class="modal" id="project2-modal" data-aos="zoom-in">
+  <div class="modal" id="project2-modal">
     <div class="modal-content">
       <span onclick="closeModal('project2')">×</span>
       <h2>Projet R+2</h2>
@@ -229,7 +227,7 @@
       </ul>
     </div>
   </div>
-  <div class="modal" id="project3-modal" data-aos="zoom-in">
+  <div class="modal" id="project3-modal">
     <div class="modal-content">
       <span onclick="closeModal('project3')">×</span>
       <h2>Étude en Cours : Chaussées Routières</h2>
