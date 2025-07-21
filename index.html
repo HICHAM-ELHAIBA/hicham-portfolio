@@ -10,10 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- AOS Animations -->
   <link href=" https://unpkg.com/aos @2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome (for LinkedIn/Email icons) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js " crossorigin="anonymous"></script>
 </head>
 <body class="light-mode">
 
-  <!-- Theme Toggle (Custom Icons) -->
+  <!-- Theme Toggle -->
   <label class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
     <img src="assets/icons/moon.svg" alt="Dark Mode" class="icon dark-icon" />
     <img src="assets/icons/sun.svg" alt="Light Mode" class="icon light-icon" />
@@ -38,7 +40,7 @@
   <section class="about" id="about" data-aos="fade-up">
     <div class="container hover-effect">
       <h2>À Propos</h2>
-      <p>Titulaire d’un DUT et d’une Licence Professionnelle en Génie Civil, j’ai renforcé mes compétences à travers plusieurs stages en conception, dimensionnement et études techniques. Passionné par le secteur du BTP, je cherche à intégrer un stage combinant bureau d’études et visites de chantiers pour développer mes compétences sur le terrain et en coordination technique.</p>
+      <p>Titulaire d’un DUT et d’une Licence Professionnelle en Génie Civil, j’ai renforcé mes compétences à travers plusieurs stages en conception de structures, analyse sismique, et modélisation avec des logiciels tels qu’AutoCAD, RSA, et CBS. Passionné par le secteur du BTP, je souhaite contribuer à des projets variés tels que les bâtiments, les routes et les ouvrages d’art, tout en développant davantage mes compétences sur le terrain comme au bureau d’études.</p>
     </div>
   </section>
 
@@ -203,7 +205,7 @@
   </footer>
 
   <!-- Project Modals -->
-  <div class="modal" id="project1-modal">
+  <div class="modal" id="project1-modal" data-aos="zoom-in">
     <div class="modal-content">
       <span onclick="closeModal('project1')">×</span>
       <h2>Étude Technique d’un Lycée</h2>
@@ -215,7 +217,7 @@
       </ul>
     </div>
   </div>
-  <div class="modal" id="project2-modal">
+  <div class="modal" id="project2-modal" data-aos="zoom-in">
     <div class="modal-content">
       <span onclick="closeModal('project2')">×</span>
       <h2>Projet R+2</h2>
@@ -227,7 +229,7 @@
       </ul>
     </div>
   </div>
-  <div class="modal" id="project3-modal">
+  <div class="modal" id="project3-modal" data-aos="zoom-in">
     <div class="modal-content">
       <span onclick="closeModal('project3')">×</span>
       <h2>Étude en Cours : Chaussées Routières</h2>
@@ -238,7 +240,7 @@
         <li>Intégration des conditions géotechniques locales</li>
       </ul>
     </div>
-  </section>
+  </div>
 
   <!-- Scripts -->
   <script src="script.js"></script>
