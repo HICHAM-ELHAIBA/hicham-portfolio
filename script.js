@@ -10,7 +10,6 @@ if (localStorage.getItem('darkMode') === 'enabled') {
   icons[1].style.display = 'block';
 }
 
-// Toggle theme
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
   icons.forEach(icon => icon.style.display = icon.style.display === 'none' ? 'block' : 'none');
@@ -32,10 +31,11 @@ document.querySelectorAll('.skill-card').forEach(card => {
 function openModal(id) {
   document.getElementById(id + '-modal').style.display = 'block';
 }
-
 function closeModal(id) {
   document.getElementById(id + '-modal').style.display = 'none';
 }
+window.openModal = openModal;
+window.closeModal = closeModal;
 
 window.onclick = function(event) {
   const modals = document.querySelectorAll('.modal');
